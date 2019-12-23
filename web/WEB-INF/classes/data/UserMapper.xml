@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="data.UserMapper">
+<!--	resultType是返回类型  当查询结果中有多条数据放入list中时，resultType应该是list中存放内部类型的类型-->
+<!--	可以在接口中指定id查询表（在定义接口上加注解@MapKey("id")），封装成一个map（id，类型）返回，此时对应resultType中是封装成的类型-->
+<!--	当查询返回只有一条数据，也可以封装成map属性返回，对应属性名加value，此时resultType中应该是map-->
+<!--	如果接口中返回的就是一个自定义对象，那么resultType中应该就是这个自定义对象-->
+    <select id="getAllUsers" resultType="user">
+	 select * from students1
+	</select>
+</mapper>
